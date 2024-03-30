@@ -1,0 +1,44 @@
+@use '../../assets/scss/variables' as variables;
+@use '../../assets/scss/mixins' as mixins;
+
+.photos {
+    padding: 40px 0;
+
+    .photo-list,
+    .btn-container {
+        @include mixins.flex();
+        flex-wrap: wrap;
+    }
+
+    .photo-item {
+        background-color: #fff;
+        width: 22%;
+        margin: 12px;
+        min-height: 120px;
+        height: max-content;
+        padding: 4px 4px 0;
+        border-radius: 2px;
+        box-shadow: 0 0 8px rgba(0 0 0/10%);
+
+        >img {
+            width: 100%;
+        }
+    }
+
+    .btn {
+        border: none;
+        padding: 12px 24px;
+        margin: 20px 0;
+        border-radius: 4px;
+        font-size: 15px;
+        background-color: blueviolet;
+        outline: none;
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.3s ease-in;
+
+        &:hover {
+            background-color: #000;
+        }
+    }
+}
