@@ -15,10 +15,11 @@ function Photos() {
                 const res = await axios.get(`https://picsum.photos/v2/list?page=${page}&limit=10`)
                 setPhotos([...photos, ...res.data])
                 setLoading(false);
-                console.log(loading);
+                setSubLoading(false);
             } catch (error) {
+                setSubLoading(true);
                 console.log(error);
-            }
+            } 
         })()
     }, [page])
 
