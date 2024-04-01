@@ -1,0 +1,87 @@
+@use '../../assets/scss/variables' as variables;
+@use '../../assets/scss/mixins' as mixins;
+
+.photos {
+    background-color: lavenderblush;
+    min-height: 100vh;
+    padding-top: 100px;
+
+    .photo-list,
+    .btn-container {
+        @include mixins.flex();
+        flex-wrap: wrap;
+    }
+
+    .photo-item {
+        width: 18%;
+        min-height: 120px;
+        height: max-content;
+        transition: all 0.3s linear;
+        position: relative;
+        margin: 12px;
+        overflow: hidden;
+        
+        >img {
+            width: 100%;
+            border-radius: 16px;
+        }
+        &::after{
+            content: '\1F5D1';
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 6px;
+            border-radius: 16px;
+            background-color: rgba(26, 26, 26, 0.4);
+            @include mixins.flex();
+            font-size: 36px;
+            color: #fff;
+            display: none;
+            cursor: pointer;
+        }
+        &:hover{
+            scale: 1.08;
+        }
+        &:hover.photo-item::after{
+            display: flex;
+        }
+    }
+    
+
+    .btn {
+        border: none;
+        padding: 12px 24px;
+        margin: 20px 0;
+        border-radius: 4px;
+        font-size: 15px;
+        background-color: blueviolet;
+        outline: none;
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.3s ease-in;
+
+        &:hover {
+            background-color: #000;
+        }
+    }
+}
+
+.loading{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px solid cornflowerblue ;
+    border-left:  4px solid transparent;
+    border-right: 4px solid transparent;
+    animation: ring 2s linear infinite;
+    margin: 0 auto;
+}
+@keyframes ring {
+    0%{
+        rotate: 0;
+    }
+    100%{
+        rotate: 360deg;
+    }
+}
