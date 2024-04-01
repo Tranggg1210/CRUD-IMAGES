@@ -28,6 +28,22 @@ function Photos() {
         setPhotos(result);
     }
 
+    const handleAddImage = () => {
+        const urlLink = prompt("Nhập link ảnh bạn muốn thêm: ");
+        let imageUrlRegex = /\.(gif|jpe?g|tiff?|png|webp|bmp)$/i;
+        if(!imageUrlRegex.test(urlLink))
+        {
+            alert("Bạn đã nhạp sai định dạng ảnh!!!")
+        }else{
+            setPhotos([...photos,
+                {id: photos.length + 1, 
+                    author: urlLink,
+                    download_url: urlLink
+                }])
+        }
+        
+    }
+
     return (
         <div className='photos container'>
             <div className="wide">
@@ -46,6 +62,7 @@ function Photos() {
                         </div>
                         <div className="btn-container">
                             <button className='btn' onClick={() => setPage(page + 1)}>Load more</button>
+                            <button className='btn' onClick={handleAddImage}>Add images</button>
                         </div>
                     </div>
                 }

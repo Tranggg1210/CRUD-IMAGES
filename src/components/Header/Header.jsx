@@ -11,10 +11,10 @@ function Header() {
                     <img src={logo} alt="" />
                 </div>
                 <nav className='header-nav'>
-                    <NavLink to="/" activeClassName="active">Home</NavLink>
-                    <NavLink to='/cna' activeClassName="active">Users</NavLink>
-                    <NavLink to='/abc' activeClassName="active">Blogs</NavLink>
-                    <NavLink to='/login' activeClassName="active">Login</NavLink>
+                    <NavLink to="/" activeclassname="active">Home</NavLink>
+                    <NavLink to='/cna' activeclassname="active">Users</NavLink>
+                    <NavLink to='/abc' activeclassname="active">Blogs</NavLink>
+                    <NavLink to='/login' activeclassname="active">Login</NavLink>
                 </nav>
             </div>
         </header>
