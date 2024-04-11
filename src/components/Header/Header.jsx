@@ -13,7 +13,7 @@ function Header() {
                 <nav className='header-nav'>
                     <NavLink to="/" activeclassname="active">Home</NavLink>
                     <NavLink to='/cna' activeclassname="active">Users</NavLink>
-                    <NavLink to='/abc' activeclassname="active">Blogs</NavLink>
+                    <NavLink to='/blogs' activeclassname="active">Blogs</NavLink>
                     <NavLink to='/login' activeclassname="active">Login</NavLink>
                 </nav>
             </div>

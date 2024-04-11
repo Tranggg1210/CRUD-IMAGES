@@ -4,6 +4,7 @@ import Login from './pages/Login/Login'
 import Signup from './pages/Signup/Signup';
 import NotFound from './pages/NotFound/NotFound';
 import Home from './pages/Home/Home';
+import Blogs from './pages/Blogs/Blogs';
 
 function App() {
   const userLogin = localStorage.getItem("user-token");
@@ -15,6 +16,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
+      <Route path="/blogs" element={<Blogs />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
     </div>

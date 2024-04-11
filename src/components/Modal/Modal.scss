@@ -1,0 +1,69 @@
+@import '../../assets/scss/mixins';
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0000007e;
+    @include flex;
+    animation: showModal 0.5s ease 1;
+}
+
+.modal-form{
+    width: 60%;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    position: relative;
+}
+.btn-container{
+    @include flex;
+    gap: 16px;
+}
+.form-item{
+    padding: 12px 0;
+    label{
+        font-size: 14px;
+    }
+    span{
+        color: red;
+    }
+    input{
+        margin: 8px 0;
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    input:focus{
+        outline: 2px solid cornflowerblue;
+    }
+}
+
+.modal-close{
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #000;
+    color: #fff;
+    @include flex;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    &:hover{
+        background-color: red;
+    }
+
+}
+
+@keyframes showModal {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
